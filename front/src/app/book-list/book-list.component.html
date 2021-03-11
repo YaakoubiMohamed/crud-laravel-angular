@@ -1,0 +1,36 @@
+<a href="add" class="btn btn-primary">Add</a>
+
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="table row-border hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>About</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let book of books">
+          <td>{{book.id}}</td>
+
+          <td>
+            {{book.name}}
+        </td>
+          <td>
+              {{book.author}}
+          </td>
+          <td>{{book.price}}</td>
+          <td>{{book.about}}</td>
+          <td>
+              <a class="btn btn-success " data-original-title="" (click)="EditBook(book)" title="">
+                  Update
+              </a>              
+              <a class="btn btn-danger" (click)="deleteBook(book.id)" data-original-title="" title="">
+                  Delete
+              </a>
+          </td>
+      </tr>
+  </tbody>
+</table>
