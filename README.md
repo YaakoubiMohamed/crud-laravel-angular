@@ -1,6 +1,8 @@
 # crud laravel angular
 1- back:laravel 
+
 create controller exp: php artisan make:controller BookController --api 
+
 2- front:angular
 add angular-datatable
     a. Install the following packages:
